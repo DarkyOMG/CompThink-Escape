@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17ee19685037254d935ee449b714adb, type: 3}
+  m_Name: DecompActionSO
+  m_EditorClassIdentifier: 
+  m_ActionType: 1
+  type: 1
+  targetImage: {fileID: 0}
+  targetText: Eine Wand streichen
+  correctIndices: 000000000200000003000000
+  textPartList:
+  - Farbe Kaufen
+  - "T\xFCr Schlie\xDFen"
+  - "T\xFCrrahmen abkleben"
+  - Folie auslegen
+  - Zwiebeln schneiden
+  imagePartList: []

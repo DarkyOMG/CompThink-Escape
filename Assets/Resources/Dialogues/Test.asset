@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1950d0233f33ad4a830f15052ec65be, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  dialogues:
+  - m_DialogueText: Dies ist ein Test
+    m_AudioClip: {fileID: 8300000, guid: b39684adb7c81834e9aee0c79f4c22a2, type: 3}
+  - m_DialogueText: Und ein zweiter Test
+    m_AudioClip: {fileID: 8300000, guid: 6f10ff6cd77721e478ffa6dfe1dd297d, type: 3}
+  - m_DialogueText: Und das Ende
+    m_AudioClip: {fileID: 8300000, guid: a04ca5b6f01195247a33453ba110767f, type: 3}
