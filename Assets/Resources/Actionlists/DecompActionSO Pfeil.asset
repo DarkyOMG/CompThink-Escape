@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17ee19685037254d935ee449b714adb, type: 3}
+  m_Name: DecompActionSO Pfeil
+  m_EditorClassIdentifier: 
+  m_ActionType: 1
+  type: 0
+  targetImage: {fileID: 21300000, guid: ac9f738770badb247b5c1fdb5827d07f, type: 3}
+  targetText: Nudeln Kochen
+  correctIndices: 000000000200000004000000
+  textPartList: []
+  imagePartList:
+  - {fileID: 21300000, guid: bbf7e8efcda597c4dab8dcc5de4ec47f, type: 3}
+  - {fileID: 21300000, guid: 60731653147627d48880978b5fefb9f8, type: 3}
+  - {fileID: 21300000, guid: 2cf5595e1a2e9a14c931b836da12937b, type: 3}
+  - {fileID: 21300000, guid: fc927fda2c9eef94a9e18b2065373321, type: 3}
+  - {fileID: 21300000, guid: 04a1d3365cfa5034b89b1e4c4d999eb3, type: 3}

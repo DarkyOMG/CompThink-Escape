@@ -14,11 +14,12 @@ public class Hole : MonoBehaviour
     private Button m_Button;
     private DebuggingStageController m_DebuggingStageController;
     public DebuggingStageController DebuggingStageController { get => m_DebuggingStageController; set { m_DebuggingStageController = value; } }
+    public bool IsFilled => m_FillingCork != null;
 
 
-    public void Highlight()
+    public void Highlight(bool highlighted)
     {
-
+        GetComponent<Image>().color = highlighted ? Color.green : Color.white;
     }
 
     public void SetFilled(Cork cork)
@@ -26,6 +27,7 @@ public class Hole : MonoBehaviour
         m_FillingCork = cork;
         m_Button.interactable = true;
         GetComponent<Image>().sprite = m_HoleSprites[1];
+        Highlight(false);
     }
 
     // Start is called before the first frame update
@@ -36,6 +38,7 @@ public class Hole : MonoBehaviour
 
     public void EmptyHole()
     {
+        if (!m_FillingCork) return;
         m_DebuggingStageController.EmptyHole(m_Index,m_FillingCork);
         m_FillingCork = null;
         GetComponent<Image>().sprite = m_HoleSprites[0];

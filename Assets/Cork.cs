@@ -44,10 +44,15 @@ public class Cork : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Hole temp = collision.GetComponent<Hole>();
+        if (temp.IsFilled) return;
         if (temp) m_HitHole = temp;
+        temp.Highlight(true);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Hole temp = collision.GetComponent<Hole>();
+        if (!temp || temp.IsFilled) return;
+        temp.Highlight(false);
         if (!m_HitHole) return;
         if(collision.gameObject.Equals(m_HitHole.gameObject))
         {

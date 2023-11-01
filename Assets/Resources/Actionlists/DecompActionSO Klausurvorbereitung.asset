@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c17ee19685037254d935ee449b714adb, type: 3}
-  m_Name: DecompActionSO
+  m_Name: DecompActionSO Klausurvorbereitung
   m_EditorClassIdentifier: 
   m_ActionType: 1
   type: 1
-  targetImage: {fileID: 0}
-  targetText: Eine Wand streichen
-  correctIndices: 000000000200000003000000
+  targetImage: {fileID: 21300000, guid: fb96a330f34b0eb4999d503a4515600a, type: 3}
+  targetText: 'Klausurvorbereitung '
+  correctIndices: 010000000300000004000000
   textPartList:
-  - Farbe Kaufen
-  - "T\xFCr Schlie\xDFen"
-  - "T\xFCrrahmen abkleben"
-  - Folie auslegen
-  - Zwiebeln schneiden
+  - "Zimmer l\xFCften "
+  - 'Karteikarten schreiben '
+  - 'Finanzplan erstellen '
+  - 'Unterlagen bereitlegen '
+  - "\xDCbungsaufgaben durchgehen "
   imagePartList: []

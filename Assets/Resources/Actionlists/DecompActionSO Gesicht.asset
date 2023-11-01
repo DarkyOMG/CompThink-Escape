@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17ee19685037254d935ee449b714adb, type: 3}
+  m_Name: DecompActionSO Gesicht
+  m_EditorClassIdentifier: 
+  m_ActionType: 1
+  type: 0
+  targetImage: {fileID: 21300000, guid: cac182cf8e48be040be77443cd0bf271, type: 3}
+  targetText: Nudeln Kochen
+  correctIndices: 010000000200000003000000
+  textPartList: []
+  imagePartList:
+  - {fileID: 21300000, guid: ef757a7ae728cca40b4dc1882e4742c9, type: 3}
+  - {fileID: 21300000, guid: ce0e82921d2462943bcc942ce07afdb2, type: 3}
+  - {fileID: 21300000, guid: 639738d5ceeddcc4fb6088fc52afc175, type: 3}
+  - {fileID: 21300000, guid: c4967f655bb3b5e499536ff074fdb71c, type: 3}
+  - {fileID: 21300000, guid: 48d4de4539a784b40810cea9992df1cb, type: 3}

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c17ee19685037254d935ee449b714adb, type: 3}
-  m_Name: DecompActionSO 1
+  m_Name: DecompActionSO Wand Malen
   m_EditorClassIdentifier: 
   m_ActionType: 1
   type: 1
   targetImage: {fileID: 0}
-  targetText: Nudeln Kochen
-  correctIndices: 010000000200000004000000
+  targetText: Eine Wand streichen
+  correctIndices: 000000000200000003000000
   textPartList:
-  - "Hunde f\xFCttern"
-  - Herd einschalten
-  - Nudeln besorgen
-  - Laptop starten
-  - Wasser salzen
+  - Farbe Kaufen
+  - "T\xFCr Schlie\xDFen"
+  - "T\xFCrrahmen abkleben"
+  - Folie auslegen
+  - Zwiebeln schneiden
   imagePartList: []
