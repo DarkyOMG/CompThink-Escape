@@ -23,6 +23,8 @@ public class DecompStageController : MonoBehaviour
     [SerializeField] private ColorFlash m_ColorFlash;
     [SerializeField] private GameObject m_WinModal;
     private DecompState m_State = DecompState.Ready;
+    [SerializeField] private ActionListSO m_Action;
+    [SerializeField] private TMP_Text m_DialogueText;
 
 
 
@@ -39,6 +41,7 @@ public class DecompStageController : MonoBehaviour
 
     private void OnEnable()
     {
+        DialogueTextPrinter.instance.m_TextField = m_DialogueText;
         EventCollector.instance.OnMouseStatusChanged += UpdateAfterMouseChange;
         EventCollector.instance.OnAnimalReachedEnd += FinalizeAfterMouseMovement;
     }
@@ -60,7 +63,10 @@ public class DecompStageController : MonoBehaviour
         m_TargetImage.gameObject.SetActive(false);
         m_TargetText.gameObject.SetActive(false);
         UpdateAfterMouseChange();
+        ActionListEnumerator.instance.SetActionList(m_Action);
+        ActionListEnumerator.instance.StartActionList();
     }
+
 
     public void StartRound(DecompActionSO decompActionSO)
     {

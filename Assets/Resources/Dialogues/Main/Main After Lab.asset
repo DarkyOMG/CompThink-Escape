@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1950d0233f33ad4a830f15052ec65be, type: 3}
+  m_Name: Main After Lab
+  m_EditorClassIdentifier: 
+  m_ActionType: 0
+  dialogues:
+  - m_DialogueText: "Ist schon verr\xFCckt, wie eine L\xF6sung bei mehreren Problemen
+      helfen kann, oder? "
+    m_AudioClip: {fileID: 8300000, guid: c404ec06f62ef2741a9a101a0c9ca2e9, type: 3}
+  - m_DialogueText: "W\xFCnschte ich h\xE4tte so eine L\xF6sung f\xFCr meine Langeweile.
+      Naja wenigstens bin ich nicht ganz allein hier.  "
+    m_AudioClip: {fileID: 8300000, guid: afff4f265c254ce4ea43eabfe8867c49, type: 3}
+  - m_DialogueText: "Wei\xDFt du wof\xFCr die 42 steht? Hast du das Buch mal gelesen?
+      Nein? Dann ist auch egal.  "
+    m_AudioClip: {fileID: 8300000, guid: fb4e4a569b39f924eada8359ad4fbb68, type: 3}

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1950d0233f33ad4a830f15052ec65be, type: 3}
+  m_Name: Main2
+  m_EditorClassIdentifier: 
+  m_ActionType: 0
+  dialogues:
+  - m_DialogueText: "Ah, Besuch. Wie sch\xF6n. Sind Sie wegen der F\xFChrung hier?
+      Nein? Druckausgleich? Explosion? Das klingt ja negativ\u2026 Naja, machse nix. "
+    m_AudioClip: {fileID: 8300000, guid: 497dccc6a2331ff41865658aabe913c5, type: 3}
+  - m_DialogueText: "Sie wollen also nicht h\xF6ren, auf welchen technologischen
+      Errungenschaften dieses Wunderwerk der Technik aufgebaut ist? Nein? Dann eben
+      nicht. "
+    m_AudioClip: {fileID: 8300000, guid: 63046e327c9a42145a1cc9ccdc9639be, type: 3}
+  - m_DialogueText: 'Ich kann Ihnen nicht wirklich weiterhelfen, ich bin eine KI
+      die darauf trainiert wurde mit den Leuten zu reden und Witze zu machen. Das
+      hilft bei diesem Problem nicht wirklich, oder?  '
+    m_AudioClip: {fileID: 8300000, guid: 8ad0faa9890c35c4a9ce727f9887349b, type: 3}
+  - m_DialogueText: "Hm vielleicht ist es ja wichtig, die KI-Module hier haben alle
+      Probleme ihre Funktionen auszuf\xFChren. F\xFCr manche Dinge brauchen wir eben
+      Menschen. "
+    m_AudioClip: {fileID: 8300000, guid: 8438dd3c4e4535b469c2ce7d69c878ac, type: 3}
+  - m_DialogueText: 'Apropos Menschen, da ist eine Zeitung, die vielleicht hilfreich
+      ist. Ich les sowas ja nicht. Ich les an sich gar nichts. Ich kann nur sprechen.  '
+    m_AudioClip: {fileID: 8300000, guid: b0f73ed4b75519d4cab89bf5a16f7892, type: 3}

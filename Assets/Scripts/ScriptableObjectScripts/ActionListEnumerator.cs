@@ -16,6 +16,11 @@ public class ActionListEnumerator : SingletonScriptableObject<ActionListEnumerat
     public void SetActionList(ActionListSO actionlist)
     {
         m_Actionlist = actionlist;
+        if(actionlist == null)
+        {
+            m_CurrentAction= 0;
+            m_CurrentDialogueIndex= 0;
+        }
     }
 
     public void StartActionList()

@@ -20,6 +20,7 @@ public class Initializer : MonoBehaviour
         DialogueTextPrinter.instance.m_TextField = m_DialogueTextField.GetComponent<TMP_Text>();
         AudioManager.instance.InitAudio();
         m_PauseMenuSO.go = m_PauseMenu;
+        ActionListEnumerator.instance.SetActionList(null);
     }
 
 }

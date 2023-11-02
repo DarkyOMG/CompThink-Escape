@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Decomp
   m_EditorClassIdentifier: 
   m_ActionList:
+  - {fileID: 11400000, guid: e5ce77f21f5fd784c84f3c086b4a916c, type: 2}
   - {fileID: 11400000, guid: e7ece2dd4cc98ae49b32608656a8885b, type: 2}
   - {fileID: 11400000, guid: 9373a9068243dc448b51d25767ebdc5e, type: 2}
   - {fileID: 11400000, guid: 24ab24a8a5b65f044b01611dc6e75bd0, type: 2}

@@ -18,6 +18,10 @@ public class RoomStateHolder : SingletonScriptableObject<RoomStateHolder>
         EventCollector.instance.OnRoomStateChanged?.Invoke();
 
     }
+    public bool GetIndexState(int index)
+    {
+        return ((m_RoomState & (1 << index)) == 1);
+    }
     public void Reset()
     {
         m_RoomState= 0;

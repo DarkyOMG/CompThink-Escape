@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1950d0233f33ad4a830f15052ec65be, type: 3}
+  m_Name: Main After Algo
+  m_EditorClassIdentifier: 
+  m_ActionType: 0
+  dialogues:
+  - m_DialogueText: "Ich w\xFCrde auch gern in den S\xFCden fliegen.. Oder in den
+      Norden? Ach hauptsache mal weg. Die Kieler F\xF6rde ist zwar sch\xF6n, aber
+      auch etwas langweilig. "
+    m_AudioClip: {fileID: 8300000, guid: 96882fad4346e3f408bfebd1b21e51d7, type: 3}
+  - m_DialogueText: 'Ich glaube das wird langsam eng mit dem Druckausgleich. Du solltest
+      dich vielleicht noch etwas beeilen. '
+    m_AudioClip: {fileID: 8300000, guid: fb69d5040038fb142ac63ac312eb7d30, type: 3}
