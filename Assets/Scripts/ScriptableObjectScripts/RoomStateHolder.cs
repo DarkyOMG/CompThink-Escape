@@ -20,7 +20,7 @@ public class RoomStateHolder : SingletonScriptableObject<RoomStateHolder>
     }
     public bool GetIndexState(int index)
     {
-        return ((m_RoomState & (1 << index)) == 1);
+        return (m_RoomState & (1 << index)) != 0;
     }
     public void Reset()
     {

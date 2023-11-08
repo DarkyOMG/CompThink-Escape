@@ -29,9 +29,11 @@ public class RoomPreparer : MonoBehaviour
 
     public void PrepareRoom()
     {
+        Debug.Log("Testing hiere");
         // Unlock all buttons and prefabs that are allready unlocked according to the game state.
        for (int i = 0; i < m_ChangeableObjects.Count; i++)
         {
+            Debug.Log(i + " "+RoomStateHolder.instance.GetIndexState(i));
             m_ChangeableObjects[i].SetActive(RoomStateHolder.instance.GetIndexState(i));
         }
     }

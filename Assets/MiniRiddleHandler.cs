@@ -29,7 +29,6 @@ public class MiniRiddleHandler : MonoBehaviour
         m_CalculatorNumber = 2500;
         m_CalculatorText.text = "2500";
         ColorSlices();
-
     }
     public void AddButtonToSequence(int id)
     {
@@ -91,6 +90,7 @@ public class MiniRiddleHandler : MonoBehaviour
     }
     private void CheckRightColoring()
     {
+        Debug.Log("Here!");
         bool allCorrect = true;
         for(int i = 0; i < 8; i++)
         {

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1950d0233f33ad4a830f15052ec65be, type: 3}
+  m_Name: Decomp
+  m_EditorClassIdentifier: 
+  m_ActionType: 0
+  dialogues:
+  - m_DialogueText: "Kommse rein, k\xF6nnse Rausgucken HAHAHA. Ahhh ja toll. Da ist
+      ja jemand neues hier bei mir und meinen M\xE4\xE4\xE4uschen."
+    m_AudioClip: {fileID: 8300000, guid: bfddea78382ef6ed3a213e59c5032b09, type: 3}
+  - m_DialogueText: "Sorry! Ich rei\xDF mich schon zusammen. Meine M\xE4use sind
+      nur s\xFC\xFC\xFC\xDF wie Zucker m\xFCssen Sie wissen. "
+    m_AudioClip: {fileID: 8300000, guid: 4b662016debe8d0cf9f832d4776621c4, type: 3}
+  - m_DialogueText: "Wir haben die M\xE4use \xFCber mehrere Jahrzehnte analysiert
+      und eine KI entwickelt, die die Sprache der M\xE4use versteht und auch spricht."
+    m_AudioClip: {fileID: 8300000, guid: 78e975e332d97d931b4bfd863864127b, type: 3}
+  - m_DialogueText: "Durch diese Kommunikation konnten wir mit den M\xE4usen einen
+      Handel eingehen, der Menschen und M\xE4usen hilft. Win-Win!"
+    m_AudioClip: {fileID: 8300000, guid: 64550053048ebb0ba9cb0552d23f8f89, type: 3}
+  - m_DialogueText: "Um CO2 zu sparen, nutzen wir heutzutage deshalb M\xE4use f\xFCr
+      interne Kommunikation, statt E-Mails. "
+    m_AudioClip: {fileID: 8300000, guid: 11f256fa55b23f0cdbde1e067db1fdf3, type: 3}
+  - m_DialogueText: "Wie, warum? M\xE4use sind schnell und zuverl\xE4ssig, und zum
+      vernaschen s\xFC\xDF. "
+    m_AudioClip: {fileID: 8300000, guid: a96a449b46b94b0ea88015f849bb7984, type: 3}
+  - m_DialogueText: "In dieser Sendezentrale verkleinern wir Bauteile und Aufgaben,
+      um sie in kleineren St\xFCcken an die richtigen Abteilungen zu senden."
+    m_AudioClip: {fileID: 8300000, guid: a64bb74da3a705092a12647950368f26, type: 3}
+  - m_DialogueText: "Aber neuerdings habe ich etwas zu viel mit den M\xE4usen gespielt
+      und ausversehen die falschen M\xE4use losgeschickt. "
+    m_AudioClip: {fileID: 8300000, guid: 4d3592b61257bb875a6005ed1e6b11f7, type: 3}
+  - m_DialogueText: "Kannst du mir unter die Arme greifen? Du musst 5 mal hintereinander
+      die richtigen M\xE4use ausw\xE4hlen um die Auftr\xE4ge rechts zu erf\xFCllen. "
+    m_AudioClip: {fileID: 8300000, guid: 42df78e58a9963df58bcb03ab77cf515, type: 3}
+  - m_DialogueText: "Versuche immer die M\xE4use anzuklicken, die deiner Meinung
+      nach zusammen den Auftrag ergeben und schick sie los. Ich beobachte dich und
+      lerne."
+    m_AudioClip: {fileID: 8300000, guid: d8fcf465a3761a2518421e2472c55bfa, type: 3}

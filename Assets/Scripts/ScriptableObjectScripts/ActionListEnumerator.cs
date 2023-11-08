@@ -65,7 +65,8 @@ public class ActionListEnumerator : SingletonScriptableObject<ActionListEnumerat
             m_CurrentDialogueIndex = 0;
             m_CurrentDialogue = null;
             m_CurrentAction++;
-            EventCollector.instance.OnActionExecuted.Invoke();
+            AudioManager.instance.StopSound(ClipType.Dialogue);
+            EventCollector.instance.OnActionExecuted?.Invoke();
         }
     }
     private void PlayNextDialogue(DialogueSO.Dialogue dialogue)

@@ -8,6 +8,7 @@ public class DialogueTextPrinter : SingletonScriptableObject<DialogueTextPrinter
 {
     public TMP_Text m_TextField;
     private TimeManager.TimeTrigger m_CurrentTimeTrigger;
+    [SerializeField] private GameObjectSO m_ShieldSO;
     
 
     public void ShowDialogueText(string text, float timelength,bool lastPiece)
@@ -20,6 +21,7 @@ public class DialogueTextPrinter : SingletonScriptableObject<DialogueTextPrinter
         {
             EventCollector.instance.OnDialogueTimeRanOut += ResetAndCloseDialogue;
         }
+        m_ShieldSO.go.SetActive(true);
         m_TextField.text= text;
         m_TextField.gameObject.SetActive(true);
         m_CurrentTimeTrigger = TimeManager.Instance.GetTimer(timelength, EventCollector.instance.OnDialogueTimeRanOut);
@@ -31,6 +33,7 @@ public class DialogueTextPrinter : SingletonScriptableObject<DialogueTextPrinter
         m_TextField.text= string.Empty;
         EventCollector.instance.OnDialogueTimeRanOut -= ResetAndCloseDialogue;
         m_CurrentTimeTrigger= null;
+        m_ShieldSO.go.SetActive(false);
     }
 
 }

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: DialogueTextPrinter
   m_EditorClassIdentifier: 
   m_TextField: {fileID: 0}
+  m_ShieldSO: {fileID: 11400000, guid: 740ed5684074b5e2d98936aae2c47591, type: 2}

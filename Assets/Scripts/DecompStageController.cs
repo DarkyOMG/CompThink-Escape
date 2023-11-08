@@ -24,7 +24,6 @@ public class DecompStageController : MonoBehaviour
     [SerializeField] private GameObject m_WinModal;
     private DecompState m_State = DecompState.Ready;
     [SerializeField] private ActionListSO m_Action;
-    [SerializeField] private TMP_Text m_DialogueText;
 
 
 
@@ -41,7 +40,6 @@ public class DecompStageController : MonoBehaviour
 
     private void OnEnable()
     {
-        DialogueTextPrinter.instance.m_TextField = m_DialogueText;
         EventCollector.instance.OnMouseStatusChanged += UpdateAfterMouseChange;
         EventCollector.instance.OnAnimalReachedEnd += FinalizeAfterMouseMovement;
     }
