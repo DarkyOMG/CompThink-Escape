@@ -19,7 +19,6 @@ public class MainStageController : MonoBehaviour
         int dialogueIndex = !RoomStateHolder.instance.GetIndexState(0) ? 0 : lastHit - 9;
         ActionListEnumerator.instance.SetActionList(m_Actions[dialogueIndex]);
         ActionListEnumerator.instance.StartActionList();
-        return;
     }
 
 }

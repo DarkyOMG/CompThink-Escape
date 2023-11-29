@@ -16,11 +16,8 @@ public class ActionListEnumerator : SingletonScriptableObject<ActionListEnumerat
     public void SetActionList(ActionListSO actionlist)
     {
         m_Actionlist = actionlist;
-        if(actionlist == null)
-        {
-            m_CurrentAction= 0;
-            m_CurrentDialogueIndex= 0;
-        }
+        m_CurrentAction= 0;
+        m_CurrentDialogueIndex= 0;
     }
 
     public void StartActionList()
@@ -44,16 +41,18 @@ public class ActionListEnumerator : SingletonScriptableObject<ActionListEnumerat
             m_CurrentDialogue = (so as DialogueSO);
             EventCollector.instance.OnDialogueTimeRanOut += IterateDialogue;
             IterateDialogue();
+            return;
         }
         if(so.ActionType == ActionType.DecompRounds) 
         {
             decompStageController.StartRound(so as DecompActionSO);
-            m_CurrentAction++;
+            m_CurrentAction = (m_CurrentAction+1) % m_Actionlist.ActionList.Count;
         }
     }
 
     private void IterateDialogue()
     {
+        EventCollector.instance.OnActionExecuted-= ExecuteNextAction;
         if(m_CurrentDialogue != null && m_CurrentDialogueIndex < m_CurrentDialogue.Dialogues.Count) 
         {
             PlayNextDialogue(m_CurrentDialogue.Dialogues[m_CurrentDialogueIndex]);
@@ -66,9 +65,10 @@ public class ActionListEnumerator : SingletonScriptableObject<ActionListEnumerat
             m_CurrentDialogue = null;
             m_CurrentAction++;
             AudioManager.instance.StopSound(ClipType.Dialogue);
-            EventCollector.instance.OnActionExecuted?.Invoke();
+            EventCollector.instance.OnActionListFinished?.Invoke();
         }
     }
+
     private void PlayNextDialogue(DialogueSO.Dialogue dialogue)
     {
         DialogueTextPrinter.instance.ShowDialogueText(dialogue.DialogueText, dialogue.AudioClip.length, m_CurrentDialogueIndex == m_CurrentDialogue.Dialogues.Count-1);

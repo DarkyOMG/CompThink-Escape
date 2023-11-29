@@ -12,4 +12,5 @@ public class EventCollector : SingletonScriptableObject<EventCollector>
     public Action OnMouseStatusChanged;
     public Action OnDecompRoundEnded;
     public Action OnAnimalReachedEnd;
+    public Action OnActionListFinished;
 }

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public enum Pipe { A,B,C,D,E,F,G,H}
 public class DebuggingStageController : MonoBehaviour
 {
+    [SerializeField] private ActionListSO m_Dialogue;
     [SerializeField] private List<Hole> m_Holes;
     [SerializeField] private List<TMP_Text> m_HoleTexts;
     [SerializeField] private List<Image> m_Signallights;
@@ -48,6 +49,8 @@ public class DebuggingStageController : MonoBehaviour
         {
             hole.DebuggingStageController = this;
         }
+        ActionListEnumerator.instance.SetActionList(m_Dialogue);
+        ActionListEnumerator.instance.StartActionList();
     }
     private void CheckWin()
     {
@@ -61,6 +64,7 @@ public class DebuggingStageController : MonoBehaviour
         {
             m_WinModal.SetActive(true);
             RoomStateHolder.instance.ChangeObjectState(9);
+            RoomStateHolder.instance.ChangeObjectState(13);
         }
     }
 }

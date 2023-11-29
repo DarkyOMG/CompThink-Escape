@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,7 @@ public class MiniRiddleHandler : MonoBehaviour
     [SerializeField] private List<Image> m_PizzaSlices;
     [SerializeField] private List<Sprite> m_PizzaSlicesSprites;
     private List<bool> m_PizzaSliceStatus = new List<bool>() { false, true, true, true, true, false, false, true };
-    private List<bool> m_PizzaSliceCorrectStatus = new List<bool>() { true, false, true, true, false, true, false, false };
+    private List<bool> m_PizzaSliceCorrectStatus = new List<bool>() { false, false, false, true, false, true, false, true };
 
     [SerializeField] private List<Image> m_Screws;
     private List<int> m_ScrewStatus = new List<int>() { 0,0,0,0 };
@@ -90,7 +91,6 @@ public class MiniRiddleHandler : MonoBehaviour
     }
     private void CheckRightColoring()
     {
-        Debug.Log("Here!");
         bool allCorrect = true;
         for(int i = 0; i < 8; i++)
         {

@@ -8,6 +8,7 @@ public class AlgorithmStageController : MonoBehaviour
 
     private Grid m_Grid;
     [SerializeField] private List<GameObject> m_ActionTilePrefabs;
+    [SerializeField] private ActionListSO m_Dialogue;
     [SerializeField] private Transform m_GridParent;
     [SerializeField] private Transform m_Canvas;
     private stage m_Currentstage = stage.One;
@@ -69,6 +70,8 @@ public class AlgorithmStageController : MonoBehaviour
     {
         CreateLabyrinth();
         ResetBird();
+        ActionListEnumerator.instance.SetActionList(m_Dialogue);
+        ActionListEnumerator.instance.StartActionList();
     }
 
     private void CreateLabyrinth()
@@ -191,6 +194,7 @@ public class AlgorithmStageController : MonoBehaviour
             RoomStateHolder.instance.ChangeObjectState(5);
             RoomStateHolder.instance.ChangeObjectState(6);
             RoomStateHolder.instance.ChangeObjectState(7);
+            RoomStateHolder.instance.ChangeObjectState(12);
             return;
         }
         m_Currentstage = (stage)((int)m_Currentstage + 1);

@@ -7,10 +7,11 @@ public class HamsterController : MonoBehaviour
 {
     public LabyrinthStageController m_LabyrinthStageController;
     public Vector2Int m_Position;
-    private Orientation m_Orientation = Orientation.up;
+    public Orientation m_Orientation = Orientation.up;
     private AnimalMover m_Mover;
     [SerializeField] private ColorFlash m_flash;
     private int[] m_TurnaroundLookuptable = { 0, 4, 0, 4, 1, 5, 1, 5, };
+    private int m_MoveCounter = 0;
     private List<List<HamsterAction>> m_WrongMoveTable = new List<List<HamsterAction>>()
     {
         new List<HamsterAction>{ },
@@ -38,38 +39,23 @@ public class HamsterController : MonoBehaviour
     {
         m_hamsterActions[actionIndex] = (HamsterAction) (((int)m_hamsterActions[actionIndex] + 1) % 4);
     }
-    public string GetAction(int actionIndex)
+    public int GetAction(int actionIndex)
     {
-        string action = "";
-        switch (m_hamsterActions[actionIndex])
-        {
-            case HamsterAction.forward:
-                action = "Geradeaus";
-                break;
-            case HamsterAction.turnAround:
-                action = "Umdrehen";
-                break;
-            case HamsterAction.goRight:
-                action = "Rechts gehen";
-                break;
-            case HamsterAction.goLeft:
-                action = "Links gehen";
-                break;
-            default:
-                break;
-        }
-        return action;
+        
+        return (int)m_hamsterActions[actionIndex];
     }
     public void StartHamster(Vector2Int endpoint)
     {
         EventCollector.instance.OnAnimalReachedEnd += MakeNextMove;
         m_Running = true;
         m_EndPoint = endpoint;
+        m_MoveCounter = 0;
         MakeNextMove();
     }
     public void MakeNextMove()
     {
-        if (!m_Running)
+        m_MoveCounter++;
+        if (!m_Running || m_MoveCounter > 100)
         {
             EventCollector.instance.OnAnimalReachedEnd -= MakeNextMove;
             m_LabyrinthStageController.StopAndReset();
@@ -127,6 +113,7 @@ public class HamsterController : MonoBehaviour
             {
                 target = m_LabyrinthStageController.GetPositionAtCoordinate(m_Position);
             }
+            m_MoveCounter =0;
             m_Mover.SetTarget(target);
         } else
         {

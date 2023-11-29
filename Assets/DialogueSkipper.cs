@@ -6,6 +6,7 @@ public class DialogueSkipper : MonoBehaviour
 {
 
     public void SkipDialogue(){
+        DialogueTextPrinter.instance.SkipDialogue();
         EventCollector.instance.OnDialogueTimeRanOut.Invoke();
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 enum stage { One, Two, Three }
 public class LabyrinthStageController : MonoBehaviour
 {
+    [SerializeField] private ActionListSO m_Dialogue;
     private Grid m_Grid;
     private Grid m_ProgrammingGrid;
     [SerializeField] private Transform m_GridParent;
@@ -16,6 +17,7 @@ public class LabyrinthStageController : MonoBehaviour
     private stage m_Currentstage = stage.One;
     [SerializeField] GameObject m_WinModal;
     private List<int[]> m_CurrentLabyrinth;
+    [SerializeField] private GameObject m_GoButton;
 
     private List<int[]> m_labyrinthOne = new List<int[]>
     {
@@ -51,22 +53,24 @@ public class LabyrinthStageController : MonoBehaviour
     void Start()
     {
         CreateLabyrinth();
-        m_ProgrammingGrid = new Grid(2, 8, 50, m_ProgrammingGridParent,5);
+        Grid tempGrid = new Grid(2, 4, 75, m_ProgrammingGridParent,5);
+        m_ProgrammingGrid = new Grid(2, 4, 75, m_ProgrammingGridParent,5);
         m_CurrentLabyrinth = m_labyrinthOne;
-        for (int i = 0; i < 2; i++)
-        {
-            for (int j = 0; j < 8; j++)
+
+        for(int i = 0;i <2;i++){
+            for (int j = 0; j < 4; j++)
             {
-                GameObject temp = m_ProgrammingGrid.InsertElement(i, j, m_Parts[i == 0? j:8]);
-                if(i == 1)
-                {
-                    AlgorithmButton btnScript = temp.GetComponent<AlgorithmButton>();
-                    btnScript.m_Index = j;
-                    btnScript.Hamster = m_Hamster;
-                }
+                tempGrid.InsertElement(i,j,m_Parts[j+(i*4)]);
+                GameObject temp = m_ProgrammingGrid.InsertElement(i, j, m_Parts[8]);
+                AlgorithmButton btnScript = temp.GetComponent<AlgorithmButton>();
+                btnScript.m_Index = j+(i*4);
+                btnScript.Hamster = m_Hamster;
             }
         }
+        
         PlaceHamsterOnStart();
+        ActionListEnumerator.instance.SetActionList(m_Dialogue);
+        ActionListEnumerator.instance.StartActionList();
     }
 
     public LabElement GetElementAtCoordinate(Vector2Int coordinate)
@@ -91,11 +95,14 @@ public class LabyrinthStageController : MonoBehaviour
     public void PlaceHamsterOnStart()
     {
         m_Hamster.m_Position = m_Startingpoints[(int)m_Currentstage];
+        m_Hamster.m_Orientation = Orientation.up;
+        m_Hamster.gameObject.transform.eulerAngles = new Vector3(0, 0, (int)m_Hamster.m_Orientation * -90);
         m_Hamster.gameObject.transform.SetParent(m_GridParent);
         m_Hamster.gameObject.transform.localPosition = m_Grid.GetPositionOfElement(m_Startingpoints[(int)m_Currentstage].x, m_Startingpoints[(int)m_Currentstage].y);
     }
     public void StartHamster()
     {
+        m_GoButton.SetActive(false);
         m_Hamster.StartHamster(m_Endpoints[(int)m_Currentstage]);
     }
     public void SendStopSignal()
@@ -106,6 +113,8 @@ public class LabyrinthStageController : MonoBehaviour
     public void StopAndReset()
     {
         PlaceHamsterOnStart();
+        m_GoButton.SetActive(true);
+        
     }
     public void LabyrinthDone()
     {
@@ -125,7 +134,7 @@ public class LabyrinthStageController : MonoBehaviour
         m_Hamster.Running = false;
         m_WinModal.SetActive(true);
         RoomStateHolder.instance.ChangeObjectState(3);
-
+        RoomStateHolder.instance.ChangeObjectState(11);
     }
     private void CreateLabyrinth()
     {

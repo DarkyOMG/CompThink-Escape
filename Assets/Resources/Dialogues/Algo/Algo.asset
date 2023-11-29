@@ -16,34 +16,34 @@ MonoBehaviour:
   dialogues:
   - m_DialogueText: "Links. LINKS! Boah.. Waaohh hey, seit wann bist du denn hier?
       Ich versuche hier die V\xF6gel zu lenken."
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: ecc1b8de06b731289a5458ed866d41f8, type: 3}
   - m_DialogueText: "Welche V\xF6gel? Na halt die V\xF6gel die in den S\xFCden wollen,
       m\xFCssen an unseren Geb\xE4uden vorbei."
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: 38f7fd1c3b2a26f859a9b81e1e772739, type: 3}
   - m_DialogueText: "Ich bin die KI, die ihnen den Weg zeigt. Au\xDFer reden kann
       ich eigentlich nur das, aber im Moment klappts einfach nicht."
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: b612b69afc976833894126e8a87bfae8, type: 3}
   - m_DialogueText: "V\xF6gel verstehen nur verschiedene Signale. Ich kann in jedes
       Gebiet ein Signal senden, was die V\xF6gel weiterschickt. "
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: d4fbf3e7449f77e7686ed20eeee0dc31, type: 3}
   - m_DialogueText: "Wie sich die V\xF6gel dann aber bewegen, bestimmt das Signal.
       Ich kann nicht einfach \"Links\" sagen."
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: d0e1b80918867f15fada16ed3b270a5a, type: 3}
   - m_DialogueText: "Du ich wei\xDF, wir kennen uns nicht, aber ich brauch mal ne
       Pause. "
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: c7b631d6f35ba478cae7794572ba402f, type: 3}
   - m_DialogueText: "Kannst du mal versuchen die V\xF6gel mit den Signalen an den
       Hindernissen vorbeizuf\xFChren?"
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: 57097593a5fa791b2b35d6da83300d03, type: 3}
   - m_DialogueText: "Unten wo der Vogel wartet starten die V\xF6gel und sie m\xFCssen
       iiirgendwie durch die obere Grenze in den Norden fliegen."
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: f69e185bafd6069b7ad435e76184a2ec, type: 3}
   - m_DialogueText: "Sie d\xFCrfen nicht auf einem leeren Feld landen und d\xFCrfen
       nicht in Hindernisse fliegen. "
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: 525d0c74a9d19c0868e9bd772a6b5ed7, type: 3}
   - m_DialogueText: "Okay, ich \xFCberlass das jetzt dir und schaue zu. Vielleicht
       lern ich ja noch etwas. "
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: 5df35b3373bbdb71d8a6d1ce3323405b, type: 3}
   - m_DialogueText: "Wenn du 3 Vogelschw\xE4rme geleitet hast, m\xFCsste ich gen\xFCgend
       gelernt haben um selbst weiterzumachen."
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: 1858796ce24658f44a23523be89b732d, type: 3}

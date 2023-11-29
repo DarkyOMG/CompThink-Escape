@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogues:
   - m_DialogueText: "Ah, der Techniker hat das Signal zur Entwarnung gegeben. Der
       Druck ist wohl ausgeglichen. Herzlichen Gl\xFCckwunsch, du hast es geschafft! "
-    m_AudioClip: {fileID: 8300000, guid: 497dccc6a2331ff41865658aabe913c5, type: 3}
+    m_AudioClip: {fileID: 8300000, guid: 4f78919232e9f0142b25d316fbb4f1bc, type: 3}

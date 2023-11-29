@@ -32,7 +32,8 @@ public class AnimalMover : MonoBehaviour
             {
                 m_IsMoving = false;
                 EventCollector.instance.OnAnimalReachedEnd.Invoke();
-            }
+            }  
+            
         }
     }
 }

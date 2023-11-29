@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Index: 0
   m_HoleSprites:
   - {fileID: 21300000, guid: 45c3da993c53a1045bf23d62d1d70dfe, type: 3}
-  - {fileID: 21300000, guid: d870b24056f90e5439d5c84120e91715, type: 3}
-  m_ControlledPipes: 000000000100000002000000
+  - {fileID: 21300000, guid: ccf0ee10da9b314779d204bb499a1e94, type: 3}
+  m_ControlledPipes: 0000000005000000
 --- !u!61 &9113369814632550178
 BoxCollider2D:
   m_ObjectHideFlags: 0

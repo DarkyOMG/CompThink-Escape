@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AlgorithmButton : MonoBehaviour
 {
-    private TMP_Text m_text;
+    private Image m_ButtonImage;
+    [SerializeField] List<Sprite> m_ImageList;
+    
     public int m_Index 
     { get; set; }
     private HamsterController m_Hamster;
@@ -17,14 +20,13 @@ public class AlgorithmButton : MonoBehaviour
 
     public void Start()
     {
-        m_text = GetComponentInChildren<TMP_Text>();
-        m_text.rectTransform.sizeDelta = gameObject.GetComponent<RectTransform>().sizeDelta;
-        m_text.text = m_Hamster.GetAction(m_Index);
+        m_ButtonImage = GetComponent<Image>();
+        m_ButtonImage.sprite = m_ImageList[m_Hamster.GetAction(m_Index)];
     }
     public void ChangeSetting()
     {
         m_Hamster.SetAction(m_Index);
-        m_text.text = m_Hamster.GetAction(m_Index);
+        m_ButtonImage.sprite = m_ImageList[m_Hamster.GetAction(m_Index)];
     }
 
 }

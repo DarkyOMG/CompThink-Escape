@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-enum DecompState { Ready, phaseone,phasetwo}
+public enum DecompState { Ready, phaseone,phasetwo}
 public class DecompStageController : MonoBehaviour
 {
 
@@ -23,16 +24,17 @@ public class DecompStageController : MonoBehaviour
     [SerializeField] private ColorFlash m_ColorFlash;
     [SerializeField] private GameObject m_WinModal;
     private DecompState m_State = DecompState.Ready;
+    [SerializeField] private ActionListSO m_Dialogue;
     [SerializeField] private ActionListSO m_Action;
 
 
 
     private List<Vector3> m_MousePositions = new List<Vector3>{
-        new Vector3(0,50,0),
-        new Vector3(100,-50,0),
-        new Vector3(-100,-50,0),
-        new Vector3(200,-100,0),
-        new Vector3(-200,-100,0) };
+        new Vector3(0,120,0),
+        new Vector3(100,20,0),
+        new Vector3(-100,20,0),
+        new Vector3(200,-30,0),
+        new Vector3(-200,-30,0) };
 
     [SerializeField] private Button m_EndRoundButton;
     private DecompActionSO m_CurrentAction;
@@ -42,11 +44,14 @@ public class DecompStageController : MonoBehaviour
     {
         EventCollector.instance.OnMouseStatusChanged += UpdateAfterMouseChange;
         EventCollector.instance.OnAnimalReachedEnd += FinalizeAfterMouseMovement;
+        EventCollector.instance.OnActionListFinished += StartGame;
+        
     }
     private void OnDisable()
     {
         EventCollector.instance.OnMouseStatusChanged -= UpdateAfterMouseChange;
         EventCollector.instance.OnAnimalReachedEnd -= FinalizeAfterMouseMovement;
+        EventCollector.instance.OnActionExecuted -= StartGame;
     }
     // Start is called before the first frame update
     void Start()
@@ -55,13 +60,14 @@ public class DecompStageController : MonoBehaviour
         ActionListEnumerator.instance.decompStageController = this;
         for(int i = 0; i < 5; i++)
         {
+        
             GameObject mouse = Instantiate(m_MousePrefab, m_MouseSpawnPoint.position,Quaternion.identity,m_MouseParent.transform);
             m_Mice.Add(new Tuple<AnimalMover,MouseController>(mouse.GetComponent<AnimalMover>(),mouse.GetComponent<MouseController>()));
         }
         m_TargetImage.gameObject.SetActive(false);
         m_TargetText.gameObject.SetActive(false);
         UpdateAfterMouseChange();
-        ActionListEnumerator.instance.SetActionList(m_Action);
+        ActionListEnumerator.instance.SetActionList(m_Dialogue);
         ActionListEnumerator.instance.StartActionList();
     }
 
@@ -138,6 +144,7 @@ public class DecompStageController : MonoBehaviour
         {
             m_WinModal.gameObject.SetActive(true);
             RoomStateHolder.instance.ChangeObjectState(1);
+            RoomStateHolder.instance.ChangeObjectState(10);
         }
         
     }
@@ -145,9 +152,14 @@ public class DecompStageController : MonoBehaviour
     {
         if(m_State == DecompState.phasetwo)
         {
+            m_State = DecompState.Ready;
             EventCollector.instance.OnActionExecuted?.Invoke();
         }
     }
-
-
+    public void StartGame()
+    {
+        ActionListEnumerator.instance.SetActionList(m_Action);
+        ActionListEnumerator.instance.StartActionList();  
+        EventCollector.instance.OnActionListFinished -= StartGame;  
+    }
 }

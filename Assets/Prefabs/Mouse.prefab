@@ -41,7 +41,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 100, y: 275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7434923657213300532
 CanvasRenderer:
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 956a66a685b353246ad0be272686aae9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48eb18b68f58ff17aa70c50008f3b4ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -109,8 +109,8 @@ MonoBehaviour:
   image: {fileID: 4568250736046053689}
   text: {fileID: 3198709510510246573}
   chosenStatus: 0
-  m_NormalSprite: {fileID: 21300000, guid: 956a66a685b353246ad0be272686aae9, type: 3}
-  m_HighlightSprite: {fileID: 21300000, guid: 8b1b97c02654ae64da3861e772565a5c, type: 3}
+  m_NormalSprite: {fileID: 21300000, guid: 48eb18b68f58ff17aa70c50008f3b4ce, type: 3}
+  m_HighlightSprite: {fileID: 21300000, guid: ae055fb3e52a67fa3b6c5ef5223d26af, type: 3}
   m_MouseImage: {fileID: 7480041684533125717}
 --- !u!114 &2774346368058566240
 MonoBehaviour:

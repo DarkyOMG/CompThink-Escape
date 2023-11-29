@@ -16,32 +16,32 @@ MonoBehaviour:
   dialogues:
   - m_DialogueText: "Hello there. Ich bin hier f\xFCr die Rohre. Also literally,
       ich steuer die Rohre hier. Haha. "
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: 14beb398d20cf70df9420fb525061bfa, type: 3}
   - m_DialogueText: Is nicht ganz so fancy und hier sind keine Tiere, aber like es
       ist n guter Job.
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: bf29fb7e91b0af1809fde8d440f13ef1, type: 3}
   - m_DialogueText: 'Ich mach, dass die richtigen Rohre geschaltet sind um den Druck
       auszugleichen. '
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: 94e70d4090f132552ae3c6e645710796, type: 3}
   - m_DialogueText: "Was? Explosion? Legit? Ich wei\xDF ja nicht, ich mach hier eigentlich..
       Also ich bin hier f\xFCr die Rohre.. Hab ich das schon erw\xE4hnt?"
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: 50e05dee18f9343a5ac35dcac1456f54, type: 3}
   - m_DialogueText: "\xC4h es gibt glaub ich ein paar L\xF6cher in den Rohren.. Aber
       wir haben nur 4 Verschluss-\xE4h-Dinger.. Hier da Korken."
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: 18fd51305f7f51cb682c629ba87378e4, type: 3}
   - m_DialogueText: "Like w\xFCrdest du mir vielleicht helfen? Ich wei\xDF nichtmal,
       welche Rohre wirklich aktiv sein m\xFCssen. Das muss irgendwo im Hauptraum
       vermerkt sein.."
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: c0003c3eed9ea70f5a333cf70306f880, type: 3}
   - m_DialogueText: "Schau dich mal um und versuche dann die richtigen L\xF6cher
       mit den Korken zu stopfen, das w\xE4r mega nice."
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: d42c7b3fcf1f4a4d69aa892b5d2d561c, type: 3}
   - m_DialogueText: "Ich kann dir etwas helfen indem ich vermerke welche Rohre du
       reparierst, wenn du L\xF6cher stopfst. "
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: e15cd8c826ee55f748138e80679b4f7e, type: 3}
   - m_DialogueText: "Ein Rohr hat immer 2 L\xF6cher, das ist literally scam vom Rohrhersteller
       eigentlich. Haha."
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: 3a533b5098de545d4b08a6c9605a71ed, type: 3}
   - m_DialogueText: "Ich glaub, wenn das nicht klappt explodieren wir, hat mir irgendwer
       erz\xE4hlt. Glaub ich. Also viel Gl\xFCck!"
-    m_AudioClip: {fileID: 0}
+    m_AudioClip: {fileID: 8300000, guid: 607f689f3be36d7da8c28dd031e6f492, type: 3}
