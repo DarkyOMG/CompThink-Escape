@@ -19,7 +19,7 @@ public class Hole : MonoBehaviour
 
     public void Highlight(bool highlighted)
     {
-        GetComponent<Image>().color = highlighted ? Color.green : Color.white;
+        GetComponent<Image>().color = highlighted ? new Color(1,1,1,0) : new Color(1,1,1,1);
     }
 
     public void SetFilled(Cork cork)

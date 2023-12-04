@@ -135,5 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_image: {fileID: 6594271693520386642}
+  m_StandardImage: {fileID: 21300000, guid: aea770bb11f352543a975047ce422b93, type: 3}
+  m_AlternateImage: {fileID: 21300000, guid: 5285ce150e041904f9355e8743a6e44f, type: 3}
   m_AlgorithmStageController: {fileID: 0}
   type: 1

@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13642588902d1b4190397bee183bfe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_standardImage: {fileID: 21300000, guid: d376e8b33d595320685346d3119813a4, type: 3}
   m_DebuggingStageController: {fileID: 0}
 --- !u!61 &699594710360410356
 BoxCollider2D:

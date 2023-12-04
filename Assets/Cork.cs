@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Cork : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 
     private Hole m_HitHole;
     private Vector3 m_StartPos;
+    [SerializeField] private Sprite m_standardImage;
 
     [SerializeField] private DebuggingStageController m_DebuggingStageController;
     public void OnBeginDrag(PointerEventData eventData)
@@ -34,6 +37,11 @@ public class Cork : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     void Start()
     {
         m_StartPos = transform.position;
+    }
+    public void OnEnable()
+    {
+
+        GetComponent<Image>().sprite = m_standardImage;
     }
 
     public void ResetPosition()
