@@ -105,7 +105,7 @@ public class HamsterController : MonoBehaviour
             Vector3 target;
             if (m_WrongMoveTable[realtype].Contains(m_hamsterActions[realtype]))
             {
-                target = m_Position.x > 9 || m_Position.y > 5 ? transform.localPosition + new Vector3(1, 1, 1) : transform.localPosition + (m_LabyrinthStageController.GetPositionAtCoordinate(m_Position) - transform.localPosition) / 2.0f;
+                target = m_Position.x > 9 || m_Position.y > 5 ||  m_Position.y < 0 || m_Position.x < 0 ? transform.localPosition + new Vector3(1, 1, 1) : transform.localPosition + (m_LabyrinthStageController.GetPositionAtCoordinate(m_Position) - transform.localPosition) / 2.0f;
                 m_Running = false;
                 m_flash.FlashColor(Color.red);
             } 
