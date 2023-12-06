@@ -12,6 +12,10 @@ public class HamsterController : MonoBehaviour
     [SerializeField] private ColorFlash m_flash;
     private int[] m_TurnaroundLookuptable = { 0, 4, 0, 4, 1, 5, 1, 5, };
     private int m_MoveCounter = 0;
+    [SerializeField] private AudioClip m_HamsterSound;
+    [SerializeField] private AudioClip m_WinSound;
+    [SerializeField] private AudioClip m_FailSound;
+
     private List<List<HamsterAction>> m_WrongMoveTable = new List<List<HamsterAction>>()
     {
         new List<HamsterAction>{ },
@@ -48,6 +52,8 @@ public class HamsterController : MonoBehaviour
     {
         EventCollector.instance.OnAnimalReachedEnd += MakeNextMove;
         m_Running = true;
+
+        AudioManager.instance.PlaySFXLoop(m_HamsterSound);
         m_EndPoint = endpoint;
         m_MoveCounter = 0;
         MakeNextMove();
@@ -58,6 +64,7 @@ public class HamsterController : MonoBehaviour
         if (!m_Running || m_MoveCounter > 100)
         {
             EventCollector.instance.OnAnimalReachedEnd -= MakeNextMove;
+            AudioManager.instance.StopSound(ClipType.SFX);
             m_LabyrinthStageController.StopAndReset();
             return;
         }
@@ -98,6 +105,7 @@ public class HamsterController : MonoBehaviour
             if (m_Position == m_EndPoint)
             {
                 m_flash.FlashColor(Color.green);
+                AudioManager.instance.PlaySFX(m_WinSound);
                 m_LabyrinthStageController.LabyrinthDone();
                 EventCollector.instance.OnAnimalReachedEnd.Invoke();
                 return;
@@ -107,6 +115,7 @@ public class HamsterController : MonoBehaviour
             {
                 target = m_Position.x > 9 || m_Position.y > 5 ||  m_Position.y < 0 || m_Position.x < 0 ? transform.localPosition + new Vector3(1, 1, 1) : transform.localPosition + (m_LabyrinthStageController.GetPositionAtCoordinate(m_Position) - transform.localPosition) / 2.0f;
                 m_Running = false;
+                AudioManager.instance.PlaySFX(m_FailSound);
                 m_flash.FlashColor(Color.red);
             } 
             else

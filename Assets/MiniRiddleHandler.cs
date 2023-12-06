@@ -23,7 +23,7 @@ public class MiniRiddleHandler : MonoBehaviour
     private float m_CalculatorNumber;
 
     private bool m_PlayerHasScrewDriver = false;
-
+    [SerializeField] private AudioClip m_ConfirmClip;
 
     private void Start()
     {
@@ -48,6 +48,8 @@ public class MiniRiddleHandler : MonoBehaviour
         }
         if (isRightSequence)
         {
+
+            AudioManager.instance.PlaySFX(m_ConfirmClip);
             RoomStateHolder.instance.ChangeObjectState(0);
         }
     }
@@ -66,6 +68,7 @@ public class MiniRiddleHandler : MonoBehaviour
     {
         if(m_CalculatorNumber == 42)
         {
+            AudioManager.instance.PlaySFX(m_ConfirmClip);
             RoomStateHolder.instance.ChangeObjectState(4);
         }
     }
@@ -98,6 +101,8 @@ public class MiniRiddleHandler : MonoBehaviour
         }
         if (allCorrect)
         {
+
+            AudioManager.instance.PlaySFX(m_ConfirmClip);
             RoomStateHolder.instance.ChangeObjectState(2);
         }
     }
@@ -126,6 +131,8 @@ public class MiniRiddleHandler : MonoBehaviour
         }
         if (allCorrect)
         {
+
+            AudioManager.instance.PlaySFX(m_ConfirmClip);
             RoomStateHolder.instance.ChangeObjectState(8);
         }
     }

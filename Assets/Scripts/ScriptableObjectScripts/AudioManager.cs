@@ -34,20 +34,30 @@ public class AudioManager : SingletonScriptableObject<AudioManager>
      * Playes a given clip through the Soundeffect-audiosource.
      * @param   clip    The clip to be played through the audiosource.
      */
-    public void PlaySound(AudioClip clip, ClipType type)
+    public void PlaySound(AudioClip clip, ClipType type, bool stopandchange=true,bool looping=false)
     {
+
         // Catch the Audiosource of the current gameobject, holding the audiosource.
         AudioSource tempSource = type == ClipType.SFX? m_AudioSourceSFX.go.GetComponent<AudioSource>() : type == ClipType.Dialogue? m_AudioSourceDialogue.go.GetComponent<AudioSource>() : m_AudioSourceMusic.go.GetComponent<AudioSource>();
+        tempSource.loop = looping;
         // If it is already playing a sound, stop it.
         if (tempSource.isPlaying)
         {
+            if (!stopandchange) return;
             tempSource.Stop();
         }
         // Play the new clip.
         tempSource.clip = clip;
         tempSource.Play();
     }
-
+    public void PlaySFX(AudioClip clip)
+    {
+        PlaySound(clip, ClipType.SFX);
+    }
+    public void PlaySFXLoop(AudioClip clip)
+    {
+        PlaySound(clip, ClipType.SFX, true, true);
+    }
     public void StopSound(ClipType type)
     {
         PlaySound(null, type);

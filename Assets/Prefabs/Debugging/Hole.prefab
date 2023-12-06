@@ -96,6 +96,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 45c3da993c53a1045bf23d62d1d70dfe, type: 3}
   - {fileID: 21300000, guid: ccf0ee10da9b314779d204bb499a1e94, type: 3}
   m_ControlledPipes: 0000000005000000
+  m_FillClip: {fileID: 8300000, guid: e1b83cbeb304e1c4aa03930e189f1a51, type: 3}
+  m_EmptyClip: {fileID: 8300000, guid: a54e25a4d4bb8504c9fc4de6ffcb83f0, type: 3}
 --- !u!61 &9113369814632550178
 BoxCollider2D:
   m_ObjectHideFlags: 0

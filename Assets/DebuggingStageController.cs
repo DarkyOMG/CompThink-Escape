@@ -15,6 +15,7 @@ public class DebuggingStageController : MonoBehaviour
     [SerializeField] private List<Sprite> m_SignalSprites;
     [SerializeField] private GameObject m_WinModal;
     private int[] m_PipeStatus = new int[8];
+    [SerializeField] private AudioClip m_WinSound;
 
 
 
@@ -65,6 +66,7 @@ public class DebuggingStageController : MonoBehaviour
             m_WinModal.SetActive(true);
             RoomStateHolder.instance.ChangeObjectState(9);
             RoomStateHolder.instance.ChangeObjectState(13);
+            AudioManager.instance.PlaySFX(m_WinSound);
         }
     }
 }

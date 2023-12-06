@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_image: {fileID: 8634863842559235722}
+  m_StandardImage: {fileID: 0}
+  m_AlternateImage: {fileID: 0}
   m_AlgorithmStageController: {fileID: 0}
   type: 0
 --- !u!61 &-8431675382898685

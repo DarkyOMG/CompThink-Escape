@@ -26,6 +26,9 @@ public class DecompStageController : MonoBehaviour
     private DecompState m_State = DecompState.Ready;
     [SerializeField] private ActionListSO m_Dialogue;
     [SerializeField] private ActionListSO m_Action;
+    [SerializeField] private AudioClip m_WinClip;
+    [SerializeField] private AudioClip m_FailClip;
+
 
 
 
@@ -140,6 +143,7 @@ public class DecompStageController : MonoBehaviour
         }
         m_ScoreHolder.ChangeScore(chosenMice.SetEquals(m_CurrentAction.correctIndices));
         m_ColorFlash.FlashColor(chosenMice.SetEquals(m_CurrentAction.correctIndices) ? Color.green : Color.red);
+        AudioManager.instance.PlaySFX(chosenMice.SetEquals(m_CurrentAction.correctIndices) ? m_WinClip: m_FailClip);
         if(m_ScoreHolder.Score >= 5)
         {
             m_WinModal.gameObject.SetActive(true);

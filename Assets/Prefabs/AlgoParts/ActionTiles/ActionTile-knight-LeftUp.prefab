@@ -80,6 +80,22 @@ PrefabInstance:
       propertyPath: m_moves.Array.data[8].y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 592376216080806083, guid: 14598d2f9d730ea4fa8286d6aa7a3e84, type: 3}
+      propertyPath: m_ClonkClipList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 592376216080806083, guid: 14598d2f9d730ea4fa8286d6aa7a3e84, type: 3}
+      propertyPath: m_ClonkClipList.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: e1b83cbeb304e1c4aa03930e189f1a51, type: 3}
+    - target: {fileID: 592376216080806083, guid: 14598d2f9d730ea4fa8286d6aa7a3e84, type: 3}
+      propertyPath: m_ClonkClipList.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 24b3648c656fb93498d48bde500e7582, type: 3}
+    - target: {fileID: 592376216080806083, guid: 14598d2f9d730ea4fa8286d6aa7a3e84, type: 3}
+      propertyPath: m_ClonkClipList.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b02352b58cf52a4c86cb8857aeb035c, type: 3}
     - target: {fileID: 1708942354229677997, guid: 14598d2f9d730ea4fa8286d6aa7a3e84, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

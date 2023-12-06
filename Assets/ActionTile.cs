@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
 
     private Vector3 m_StartPos;
@@ -13,6 +14,7 @@ public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDra
     private AlgorithmStageController m_AlgorithmStageController;
     public AlgorithmStageController AlgorithmStageController { get => m_AlgorithmStageController;set { m_AlgorithmStageController = value; } }
     public Vector2Int[] m_moves;
+    [SerializeField] private List<AudioClip> m_ClonkClipList;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +23,10 @@ public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        AudioManager.instance.PlaySFX(m_ClonkClipList[Random.Range(0, 2)]);
         if (m_SavedTile)
         {
+            MarkEndTile(m_SavedTile, Color.white);
             m_AlgorithmStageController.SwapTiles(gameObject,m_SavedTile.gameObject);
             m_SavedTile.gameObject.SetActive(true);
 
@@ -41,7 +45,9 @@ public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDra
         {
             transform.SetParent(m_HitTile.transform.parent);
             transform.localPosition = m_HitTile.GetWorldPosition();
+            MarkEndTile(m_HitTile, Color.blue);
             m_AlgorithmStageController.SwapTiles(m_HitTile.gameObject, gameObject);
+
             m_SavedTile = m_HitTile;
             m_HitTile.gameObject.SetActive(false);
             m_IsSet = true;
@@ -50,6 +56,8 @@ public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDra
         {
             transform.position = m_StartPos;
         }
+
+        AudioManager.instance.PlaySFX(m_ClonkClipList[Random.Range(0, 2)]);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -76,6 +84,29 @@ public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDra
         if (m_SavedTile)
         {
             Destroy(m_SavedTile.gameObject);
+        }
+    }
+    private void MarkEndTile(Tile tile, Color color)
+    {
+        Vector2Int temp = AlgorithmStageController.GetIndexOfElement(tile.gameObject);
+        foreach(Vector2Int move in m_moves)
+        {
+            temp+= move;
+        }
+
+        if(temp.x < 10 && temp.y <8 && temp.x >= 0 && temp.y >= 0)
+        {
+            Tile tempTile = AlgorithmStageController.GetObjectFromIndex(temp).GetComponent<Tile>();
+            tempTile.gameObject.GetComponent<Image>().color = color;
+            tempTile.m_IsBlue = color == Color.blue;
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (m_SavedTile)
+        {
+            MarkEndTile(m_SavedTile, Color.white);
         }
     }
 }

@@ -9,7 +9,7 @@ public class Tile : MonoBehaviour
 {
     public Image m_image;
     public Sprite m_StandardImage;
-
+    public bool m_IsBlue;
     public Sprite m_AlternateImage;
     [SerializeField] private AlgorithmStageController m_AlgorithmStageController;
     public AlgorithmStageController AlgorithmStageController { get => m_AlgorithmStageController; set { m_AlgorithmStageController = value; } }
@@ -37,7 +37,7 @@ public class Tile : MonoBehaviour
         }
         else
         {
-            m_image.color = Color.white;
+            m_image.color = m_IsBlue? Color.blue: Color.white;
         }
     }
 

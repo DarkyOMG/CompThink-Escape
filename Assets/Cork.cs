@@ -9,13 +9,14 @@ public class Cork : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 {
 
     private Hole m_HitHole;
+    [SerializeField] private AudioClip m_PickupClip;
     private Vector3 m_StartPos;
     [SerializeField] private Sprite m_standardImage;
 
     [SerializeField] private DebuggingStageController m_DebuggingStageController;
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
+        AudioManager.instance.PlaySFX(m_PickupClip);
     }
 
     public void OnDrag(PointerEventData eventData)

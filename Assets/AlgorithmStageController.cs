@@ -11,6 +11,9 @@ public class AlgorithmStageController : MonoBehaviour
     [SerializeField] private ActionListSO m_Dialogue;
     [SerializeField] private Transform m_GridParent;
     [SerializeField] private Transform m_Canvas;
+    [SerializeField] private AudioClip m_StartClip;
+    [SerializeField] private AudioClip m_ContinueClip;
+    [SerializeField] private AudioClip m_WrongMoveClip;
     private stage m_Currentstage = stage.One;
     [SerializeField] GameObject m_WinModal;
     private List<int[]> m_CurrentLabyrinth;
@@ -103,7 +106,14 @@ public class AlgorithmStageController : MonoBehaviour
         Vector3 position = m_Grid.GetPositionOfElement(temp.x, temp.y);
         return position;
     }
-
+    public Vector2Int GetIndexOfElement(GameObject element)
+    {
+        return m_Grid.GetIndexByElement(element);
+    }
+    public GameObject GetObjectFromIndex(Vector2Int position)
+    {
+        return m_Grid.GetElementAtIndex(position.x,position.y);
+    }
     public void SwapTiles(GameObject oldTile, GameObject newTile)
     {
         Vector2Int temp = m_Grid.GetIndexByElement(oldTile);
@@ -112,6 +122,7 @@ public class AlgorithmStageController : MonoBehaviour
 
     public void StartBird()
     {
+        AudioManager.instance.PlaySFX(m_StartClip);
         m_Bird.transform.SetParent(m_GridParent);
         m_Bird.transform.localPosition = m_Grid.GetPositionOfElement(m_StartingPoints[0].x, m_StartingPoints[0].y);
         m_Bird.m_Position = m_StartingPoints[0];
@@ -121,10 +132,12 @@ public class AlgorithmStageController : MonoBehaviour
 
     public void NextMove()
     {
+        AudioManager.instance.PlaySound(m_ContinueClip, ClipType.SFX, false);
         bool hitObstacle = CheckForObstacle();
         if (hitObstacle)
         {
             ResetBird();
+            AudioManager.instance.PlaySFX(m_WrongMoveClip);
             m_ColorFlash.FlashColor(Color.red);
             EventCollector.instance.OnAnimalReachedEnd -= NextMove;
             return;
@@ -156,6 +169,7 @@ public class AlgorithmStageController : MonoBehaviour
             else
             {
                 ResetBird();
+                AudioManager.instance.PlaySFX(m_WrongMoveClip);
                 m_ColorFlash.FlashColor(Color.red);
                 EventCollector.instance.OnAnimalReachedEnd -= NextMove;
             }

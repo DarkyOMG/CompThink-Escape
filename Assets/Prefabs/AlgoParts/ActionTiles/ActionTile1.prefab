@@ -91,6 +91,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moves: []
+  m_ClonkClipList:
+  - {fileID: 8300000, guid: e1b83cbeb304e1c4aa03930e189f1a51, type: 3}
+  - {fileID: 8300000, guid: 24b3648c656fb93498d48bde500e7582, type: 3}
+  - {fileID: 8300000, guid: 1b02352b58cf52a4c86cb8857aeb035c, type: 3}
 --- !u!50 &1781429812993788639
 Rigidbody2D:
   serializedVersion: 4

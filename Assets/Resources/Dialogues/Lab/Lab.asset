@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionType: 0
   dialogues:
-  - m_DialogueText: "Ahoi! Haha, nein ich bin kein Seegarn \xE4\xE4hh Seemann. Ich
-      bin die Hamster-KI."
+  - m_DialogueText: "Ahoi! Haha, nein ich bin kein Seegarn \xE4\xE4hh.. Seemann.
+      Ich bin die Hamster-KI."
     m_AudioClip: {fileID: 8300000, guid: c5aa0f610e79eff4d973f7ed2f240565, type: 3}
-  - m_DialogueText: "Du wei\xC3\x9Ft ja sicher, dass wir viel Arbeit in den Schwartenschutz
-      \xC3\xA4hh Artenschutz gesteckt haben, ja? "
+  - m_DialogueText: "Du weisst ja sicher, dass wir viel Arbeit in den Schwartenschutz
+      \xE4\xE4hh.. Artenschutz gesteckt haben, ja? "
     m_AudioClip: {fileID: 8300000, guid: 5e654a0a43de929a9973b344f87d2d23, type: 3}
   - m_DialogueText: Bei uns bleibt jedes Tier am Leben! Auch der kleinste Hamster!
       IMMER!

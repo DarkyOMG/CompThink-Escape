@@ -5814,6 +5814,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 327218497}
     - target: {fileID: 4937780424673040482, guid: ee62a4a1c61e6db4dae98c34bda07cb5, type: 3}
+      propertyPath: m_HamsterSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c914f8dc26023c3409c551a2e5b28405, type: 3}
+    - target: {fileID: 4937780424673040482, guid: ee62a4a1c61e6db4dae98c34bda07cb5, type: 3}
       propertyPath: m_LabyrinthStageController
       value: 
       objectReference: {fileID: 525969533}

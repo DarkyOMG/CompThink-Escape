@@ -614,6 +614,8 @@ MonoBehaviour:
   m_WinModal: {fileID: 811386497}
   m_Dialogue: {fileID: 11400000, guid: ccd70e87e1880ff9a9c6a7684e8f6b1a, type: 2}
   m_Action: {fileID: 11400000, guid: 9b20c5399c0b75f75ba1a1fea56f9032, type: 2}
+  m_WinClip: {fileID: 8300000, guid: af0de0006847f3247b46e04a36953350, type: 3}
+  m_FailClip: {fileID: 8300000, guid: ce73be8cdb4a607498981bff6eae3b9c, type: 3}
   m_EndRoundButton: {fileID: 727512870}
 --- !u!4 &124907344
 Transform:

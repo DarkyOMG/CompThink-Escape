@@ -8639,6 +8639,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bc51ffaa6dcb2ab478b7f17d0c5853ff, type: 3}
   - {fileID: 21300000, guid: 9cc868330bdfe0141b4a803b125b3065, type: 3}
   m_WinModal: {fileID: 660356061}
+  m_WinSound: {fileID: 8300000, guid: af0de0006847f3247b46e04a36953350, type: 3}
 --- !u!4 &2120025392
 Transform:
   m_ObjectHideFlags: 0

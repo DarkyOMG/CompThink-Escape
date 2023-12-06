@@ -15,6 +15,8 @@ public class Hole : MonoBehaviour
     private DebuggingStageController m_DebuggingStageController;
     public DebuggingStageController DebuggingStageController { get => m_DebuggingStageController; set { m_DebuggingStageController = value; } }
     public bool IsFilled => m_FillingCork != null;
+    [SerializeField] private AudioClip m_FillClip;
+    [SerializeField] private AudioClip m_EmptyClip;
 
 
     public void Highlight(bool highlighted)
@@ -25,6 +27,7 @@ public class Hole : MonoBehaviour
     public void SetFilled(Cork cork)
     {
         m_FillingCork = cork;
+        AudioManager.instance.PlaySFX(m_FillClip);
         m_Button.interactable = true;
         GetComponent<Image>().sprite = m_HoleSprites[1];
         Highlight(false);
@@ -39,6 +42,7 @@ public class Hole : MonoBehaviour
     public void EmptyHole()
     {
         if (!m_FillingCork) return;
+        AudioManager.instance.PlaySFX(m_EmptyClip);
         m_DebuggingStageController.EmptyHole(m_Index,m_FillingCork);
         m_FillingCork = null;
         GetComponent<Image>().sprite = m_HoleSprites[0];
