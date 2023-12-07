@@ -383,10 +383,10 @@ RectTransform:
   - {fileID: 1330922799}
   - {fileID: 1582399446}
   - {fileID: 671145392}
+  - {fileID: 2120344229}
   - {fileID: 1858313970}
   - {fileID: 1968597667}
   - {fileID: 1177272174}
-  - {fileID: 2120344229}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -816,7 +816,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Dieses Spiel wurde im Rahmen einer Masterarbeit und einer Bachelorarbeit
     zum Thema Serious Gaming und Educational Escape Room im Kontext des Computational
-    Thinkings in einer studentischen Kooperation zwischen der Christian-Albrechts-Universit\xE4t
+    Thinkings in einer Kooperation zwischen Studierenden der Christian-Albrechts-Universit\xE4t
     zu Kiel und der Hochschule Flensburg konzipiert und implementiert."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
