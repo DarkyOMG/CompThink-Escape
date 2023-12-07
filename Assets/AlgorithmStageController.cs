@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AlgorithmStageController : MonoBehaviour
 {
@@ -18,9 +19,11 @@ public class AlgorithmStageController : MonoBehaviour
     [SerializeField] GameObject m_WinModal;
     private List<int[]> m_CurrentLabyrinth;
     [SerializeField] private Bird m_Bird;
+    public bool IsFlying = false;
     private Vector2Int[] m_CurrentMoveList;
     private int m_CurrentMoveInList = 0;
     [SerializeField] private List<GameObject> m_Parts;
+    [SerializeField] private Button m_StartButton;
     private List<Vector2Int> m_StartingPoints = new List<Vector2Int>() { new Vector2Int(1, 0), new Vector2Int(0, 0), new Vector2Int(0, 0) };
     private List<int[]> m_labyrinthOne = new List<int[]>
     {
@@ -71,6 +74,7 @@ public class AlgorithmStageController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.instance.InitAudio();
         CreateLabyrinth();
         ResetBird();
         ActionListEnumerator.instance.SetActionList(m_Dialogue);
@@ -122,6 +126,8 @@ public class AlgorithmStageController : MonoBehaviour
 
     public void StartBird()
     {
+        IsFlying = true;
+        m_StartButton.interactable = false;
         AudioManager.instance.PlaySFX(m_StartClip);
         m_Bird.transform.SetParent(m_GridParent);
         m_Bird.transform.localPosition = m_Grid.GetPositionOfElement(m_StartingPoints[0].x, m_StartingPoints[0].y);
@@ -178,6 +184,8 @@ public class AlgorithmStageController : MonoBehaviour
 
     private void ResetBird()
     {
+        IsFlying = false;
+        m_StartButton.interactable = true;
         m_Bird.transform.SetParent(m_GridParent);
         m_Bird.transform.localPosition = m_Grid.GetPositionOfElement(m_StartingPoints[0].x, m_StartingPoints[0].y);
         Vector3 temp = m_Bird.transform.localPosition;

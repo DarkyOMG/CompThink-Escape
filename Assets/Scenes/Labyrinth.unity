@@ -955,6 +955,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 931c75968762de3dab1446c68fccab75, type: 3}
+--- !u!1 &239321913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2577656182633568496, guid: 931c75968762de3dab1446c68fccab75, type: 3}
+  m_PrefabInstance: {fileID: 239321912}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &274645905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,7 +1844,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6790805621579381200, guid: 931c75968762de3dab1446c68fccab75, type: 3}
   m_PrefabInstance: {fileID: 239321912}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 239321913}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -2185,6 +2190,7 @@ MonoBehaviour:
   m_Hamster: {fileID: 783737792}
   m_WinModal: {fileID: 622478928}
   m_GoButton: {fileID: 830772865}
+  m_BackButton: {fileID: 239321913}
 --- !u!4 &525969534
 Transform:
   m_ObjectHideFlags: 0

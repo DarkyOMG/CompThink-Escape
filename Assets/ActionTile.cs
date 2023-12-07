@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
+public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 
     private Vector3 m_StartPos;
@@ -23,24 +23,31 @@ public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (AlgorithmStageController.IsFlying) return;
         AudioManager.instance.PlaySFX(m_ClonkClipList[Random.Range(0, 2)]);
         if (m_SavedTile)
         {
             MarkEndTile(m_SavedTile, Color.white);
             m_AlgorithmStageController.SwapTiles(gameObject,m_SavedTile.gameObject);
             m_SavedTile.gameObject.SetActive(true);
-
         }
         m_IsSet = false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (AlgorithmStageController.IsFlying) return;
+        if (m_SavedTile)
+        {
+            MarkEndTile(m_SavedTile, Color.white);
+            m_SavedTile.gameObject.SetActive(true);
+        }
         transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (AlgorithmStageController.IsFlying) return;
         if (m_HitTile)
         {
             transform.SetParent(m_HitTile.transform.parent);
@@ -96,17 +103,14 @@ public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDra
 
         if(temp.x < 10 && temp.y <8 && temp.x >= 0 && temp.y >= 0)
         {
-            Tile tempTile = AlgorithmStageController.GetObjectFromIndex(temp).GetComponent<Tile>();
-            tempTile.gameObject.GetComponent<Image>().color = color;
-            tempTile.m_IsBlue = color == Color.blue;
-        }
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if (m_SavedTile)
-        {
-            MarkEndTile(m_SavedTile, Color.white);
+            Debug.Log(temp);
+            GameObject tempObject = AlgorithmStageController.GetObjectFromIndex(temp);
+            Tile tempTile = tempObject.GetComponent<Tile>();
+            Debug.Log(tempObject);
+            if(tempTile){
+                tempTile.gameObject.GetComponent<Image>().color = color;
+                tempTile.m_IsBlue = color == Color.blue;
+            }
         }
     }
 }

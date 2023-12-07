@@ -22,12 +22,12 @@ MonoBehaviour:
       nicht. "
     m_AudioClip: {fileID: 8300000, guid: 63046e327c9a42145a1cc9ccdc9639be, type: 3}
   - m_DialogueText: 'Ich kann Ihnen nicht wirklich weiterhelfen, ich bin eine KI
-      die darauf trainiert wurde mit den Leuten zu reden und Witze zu machen. Das
-      hilft bei diesem Problem nicht wirklich, oder?  '
+      die darauf trainiert wurde, mit den Leuten zu reden und Witze zu machen. Das
+      hilft bei diesem Problem nicht wirklich, oder? '
     m_AudioClip: {fileID: 8300000, guid: 8ad0faa9890c35c4a9ce727f9887349b, type: 3}
-  - m_DialogueText: "Hm vielleicht ist es ja wichtig, die KI-Module hier haben alle
-      Probleme ihre Funktionen auszuf\xFChren. F\xFCr manche Dinge brauchen wir eben
-      Menschen. "
+  - m_DialogueText: "Hm vielleicht ist es ja wichtig. Die KI-Module hier haben alle
+      Probleme, ihre Funktionen auszuf\xFChren. F\xFCr manche Dinge brauchen wir
+      eben Menschen."
     m_AudioClip: {fileID: 8300000, guid: 8438dd3c4e4535b469c2ce7d69c878ac, type: 3}
   - m_DialogueText: 'Apropos Menschen, da ist eine Zeitung, die vielleicht hilfreich
       ist. Ich les sowas ja nicht. Ich les an sich gar nichts. Ich kann nur sprechen.  '

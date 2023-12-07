@@ -7,7 +7,7 @@ public class MainStageController : MonoBehaviour
     [SerializeField] private List<ActionListSO> m_Actions;
     public void Start()
     {
-       
+       AudioManager.instance.InitAudio();
         int lastHit = 0;
         for (int i = 10; i < 14; i++)
         {

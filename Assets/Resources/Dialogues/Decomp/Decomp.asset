@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionType: 0
   dialogues:
-  - m_DialogueText: "Kommse rein, k\xF6nnse Rausgucken HAHAHA. Ahhh ja toll. Da ist
-      ja jemand neues hier bei mir und meinen M\xE4\xE4\xE4uschen."
+  - m_DialogueText: "Kommse rein, k\xF6nnse rausgucken HAHAHA. Ahhh ja toll. Da ist
+      ja jemand Neues hier bei mir und meinen M\xE4\xE4\xE4uschen."
     m_AudioClip: {fileID: 8300000, guid: 784040f93f58c502c931e5cebf7d54bb, type: 3}
   - m_DialogueText: "Sorry! Ich rei\xDF mich schon zusammen. Meine M\xE4use sind
       nur s\xFC\xFC\xFC\xDF wie Zucker m\xFCssen Sie wissen. "
@@ -30,16 +30,16 @@ MonoBehaviour:
       interne Kommunikation, statt E-Mails. "
     m_AudioClip: {fileID: 8300000, guid: 204ad79d5573c4aeea65af284057e8dc, type: 3}
   - m_DialogueText: "Wie, warum? M\xE4use sind schnell und zuverl\xE4ssig, und zum
-      vernaschen s\xFC\xDF. "
+      Vernaschen s\xFC\xDF. "
     m_AudioClip: {fileID: 8300000, guid: 30587e9f5f3fa927ea293822fe5eb1c9, type: 3}
   - m_DialogueText: "In dieser Sendezentrale verkleinern wir Bauteile und Aufgaben,
       um sie in kleineren St\xFCcken an die richtigen Abteilungen zu senden."
     m_AudioClip: {fileID: 8300000, guid: 2f4a1195e71f1bcf4a81b92c5c9ace18, type: 3}
   - m_DialogueText: "Aber neuerdings habe ich etwas zu viel mit den M\xE4usen gespielt
-      und ausversehen die falschen M\xE4use losgeschickt. "
+      und aus Versehen die falschen M\xE4use losgeschickt. "
     m_AudioClip: {fileID: 8300000, guid: e3bbe0550ea874624bae10c303ec748d, type: 3}
-  - m_DialogueText: "Kannst du mir unter die Arme greifen? Du musst 5 mal hintereinander
-      die richtigen M\xE4use ausw\xE4hlen um die Auftr\xE4ge rechts zu erf\xFCllen. "
+  - m_DialogueText: "Kannst du mir unter die Arme greifen? Du musst f\xFCnfmal hintereinander
+      die richtigen M\xE4use ausw\xE4hlen, um die Auftr\xE4ge rechts zu erf\xFCllen. "
     m_AudioClip: {fileID: 8300000, guid: d4940b8f13ccab2e89ccfd1dd9eaf073, type: 3}
   - m_DialogueText: "Versuche immer die M\xE4use anzuklicken, die deiner Meinung
       nach zusammen den Auftrag ergeben und schick sie los. Ich beobachte dich und

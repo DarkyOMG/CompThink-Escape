@@ -17,8 +17,8 @@ MonoBehaviour:
   - m_DialogueText: "Ist schon verr\xFCckt, wie eine L\xF6sung bei mehreren Problemen
       helfen kann, oder? "
     m_AudioClip: {fileID: 8300000, guid: c404ec06f62ef2741a9a101a0c9ca2e9, type: 3}
-  - m_DialogueText: "W\xFCnschte ich h\xE4tte so eine L\xF6sung f\xFCr meine Langeweile.
-      Naja wenigstens bin ich nicht ganz allein hier.  "
+  - m_DialogueText: "W\xFCnschte, ich h\xE4tte so eine L\xF6sung f\xFCr meine Langeweile.
+      Naja wenigstens bin ich nicht ganz allein hier. "
     m_AudioClip: {fileID: 8300000, guid: afff4f265c254ce4ea43eabfe8867c49, type: 3}
   - m_DialogueText: "Wei\xDFt du wof\xFCr die 42 steht? Hast du das Buch mal gelesen?
       Nein? Dann ist auch egal.  "

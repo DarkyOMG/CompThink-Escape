@@ -1237,9 +1237,11 @@ MonoBehaviour:
   m_WrongMoveClip: {fileID: 8300000, guid: ce73be8cdb4a607498981bff6eae3b9c, type: 3}
   m_WinModal: {fileID: 92003166}
   m_Bird: {fileID: 1368239827974287398}
+  IsFlying: 0
   m_Parts:
   - {fileID: 8803970669743712528, guid: 6c4e840d37860ad40bc509fe6dad3062, type: 3}
   - {fileID: 8625868635314655976, guid: 2388a62e9010bcd49b1dc90c4904c997, type: 3}
+  m_StartButton: {fileID: 1680128902}
   m_ColorFlash: {fileID: 1838321250}
 --- !u!1 &750831041
 GameObject:

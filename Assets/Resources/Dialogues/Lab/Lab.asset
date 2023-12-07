@@ -23,21 +23,21 @@ MonoBehaviour:
   - m_DialogueText: Bei uns bleibt jedes Tier am Leben! Auch der kleinste Hamster!
       IMMER!
     m_AudioClip: {fileID: 8300000, guid: e4cb340bf37a5e65585dffbcadd053f6, type: 3}
-  - m_DialogueText: "Wegen dem Umstieg auf Vertikalplantagen, verirren sich aber
+  - m_DialogueText: "Wegen des Umstiegs auf Vertikalplantagen, verirren sich aber
       leider \xF6fters die kleinen Tierchen in unseren Feldern."
     m_AudioClip: {fileID: 8300000, guid: ebd6932c996fe99b29f48fc8a48d46b4, type: 3}
   - m_DialogueText: "Kein Wunder, wegen der Aerodynamo \xE4\xE4hh Aerodynamik sind
       unsere Felder auch angelegt wie Labyrinthe."
     m_AudioClip: {fileID: 8300000, guid: 508193245e40d5c03ac559243fa7e5f2, type: 3}
-  - m_DialogueText: "Ich gebe den Hamstern immer gute Hinweise um die Labyrinthe
+  - m_DialogueText: "Ich gebe den Hamstern immer gute Hinweise, um die Labyrinthe
       zu durchlaufen.. Nur im Moment.. \xC4hh.. Geht das nicht immer."
     m_AudioClip: {fileID: 8300000, guid: d26bd25a144f3b1409ecd29a460b8757, type: 3}
   - m_DialogueText: 'Nie. Ich meinte nie. Es geht nie. Aber das ist ja gar kein Problem,
       du bist ja da. '
     m_AudioClip: {fileID: 8300000, guid: 83cfc2db02603e3628b1b74a93460341, type: 3}
   - m_DialogueText: "Ich habe dir mal meine Eingabemaske freigegeben. Links siehst
-      du Anweisungen die der Hamster ausf\xFChrt, wenn er ein labyrinthst\xFCck vor
-      sich sieht."
+      du Anweisungen, die der Hamster ausf\xFChrt, wenn er ein labyrinthst\xFCck
+      vor sich sieht."
     m_AudioClip: {fileID: 8300000, guid: bb7972ec95a5e85b1a6e359ce1245de5, type: 3}
   - m_DialogueText: Was? Du bist gar nicht in Algorithmen und Generalisierung ausgebildet?
       Jaaa das macht doch nichts *grummel gemurmel*
@@ -45,7 +45,7 @@ MonoBehaviour:
   - m_DialogueText: 'Vielleicht liegt im Hauptraum des KI-Zentrums ja etwas, was
       dir hilft? '
     m_AudioClip: {fileID: 8300000, guid: e20a165c5fe6b9e74a97b795be7e8ed8, type: 3}
-  - m_DialogueText: Such dir Hinweise wie du dem Hamster helfen kannst die Labyrinthe
+  - m_DialogueText: Such dir Hinweise, wie du dem Hamster helfen kannst die Labyrinthe
       zu durchqueren, ja?
     m_AudioClip: {fileID: 8300000, guid: 8a6404543346900ef859f326c91f228a, type: 3}
   - m_DialogueText: "\xC4ndere dann die Eingabemaske links f\xFCr jedes Feld, was

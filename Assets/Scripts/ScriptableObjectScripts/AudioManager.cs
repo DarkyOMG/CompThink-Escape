@@ -25,9 +25,13 @@ public class AudioManager : SingletonScriptableObject<AudioManager>
         {
             m_AudioSourceSFX.go.GetComponent<AudioSource>().volume = m_AudioVolumeSFX.value;
         }
-        if (m_AudioSourceSFX.go)
+        if (m_AudioSourceMusic.go)
         {
             m_AudioSourceMusic.go.GetComponent<AudioSource>().volume = m_AudioVolumeMusic.value;
+        }
+        if(m_AudioSourceDialogue.go)
+        {
+            m_AudioSourceDialogue.go.GetComponent<AudioSource>().volume = m_AudioVolumeDialogue.value;
         }
     }
     /**

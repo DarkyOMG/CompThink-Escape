@@ -15,8 +15,8 @@ MonoBehaviour:
   m_ActionType: 0
   dialogues:
   - m_DialogueText: "Ich w\xFCrde auch gern in den S\xFCden fliegen.. Oder in den
-      Norden? Ach hauptsache mal weg. Die Kieler F\xF6rde ist zwar sch\xF6n, aber
-      auch etwas langweilig. "
+      Norden? Ach Hauptsache mal weg. Die Kieler F\xF6rde ist zwar sch\xF6n, aber
+      auch etwas langweilig."
     m_AudioClip: {fileID: 8300000, guid: 96882fad4346e3f408bfebd1b21e51d7, type: 3}
   - m_DialogueText: 'Ich glaube das wird langsam eng mit dem Druckausgleich. Du solltest
       dich vielleicht noch etwas beeilen. '

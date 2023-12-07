@@ -59,6 +59,7 @@ public class DecompStageController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.instance.InitAudio();
         m_State = DecompState.Ready;
         ActionListEnumerator.instance.decompStageController = this;
         for(int i = 0; i < 5; i++)
@@ -77,6 +78,7 @@ public class DecompStageController : MonoBehaviour
 
     public void StartRound(DecompActionSO decompActionSO)
     {
+        m_EndRoundButton.interactable = true;
         m_State = DecompState.phaseone;
         m_EndRoundButton.gameObject.SetActive(true);
         m_CurrentAction = decompActionSO;
@@ -126,6 +128,7 @@ public class DecompStageController : MonoBehaviour
     }
     public void EndRound()
     {
+        m_EndRoundButton.interactable = false;
         m_State = DecompState.phasetwo;
         HashSet<int> chosenMice = new HashSet<int>();
         for (int i = 0;i<5;i++)

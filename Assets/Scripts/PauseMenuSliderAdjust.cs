@@ -36,7 +36,7 @@ public class PauseMenuSliderAdjust : MonoBehaviour
 
     private void OnEnable()
     {
-
+        _audioDialogue.value = _audioDialoguefloat.value;
         _audioSFX.value = _audioSFXfloat.value;
         _audioMusic.value = _audioMusicfloat.value;
     }

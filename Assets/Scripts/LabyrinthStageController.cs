@@ -18,6 +18,8 @@ public class LabyrinthStageController : MonoBehaviour
     [SerializeField] GameObject m_WinModal;
     private List<int[]> m_CurrentLabyrinth;
     [SerializeField] private GameObject m_GoButton;
+    [SerializeField] private GameObject m_BackButton;
+    
 
     private List<int[]> m_labyrinthOne = new List<int[]>
     {
@@ -52,6 +54,7 @@ public class LabyrinthStageController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.instance.InitAudio();
         CreateLabyrinth();
         Grid tempGrid = new Grid(2, 4, 75, m_ProgrammingGridParent,5);
         m_ProgrammingGrid = new Grid(2, 4, 75, m_ProgrammingGridParent,5);
@@ -103,6 +106,7 @@ public class LabyrinthStageController : MonoBehaviour
     public void StartHamster()
     {
         m_GoButton.SetActive(false);
+        m_BackButton.SetActive(false);
         m_Hamster.StartHamster(m_Endpoints[(int)m_Currentstage]);
     }
     public void SendStopSignal()
@@ -114,6 +118,7 @@ public class LabyrinthStageController : MonoBehaviour
     {
         PlaceHamsterOnStart();
         m_GoButton.SetActive(true);
+        m_BackButton.SetActive(true);
         
     }
     public void LabyrinthDone()

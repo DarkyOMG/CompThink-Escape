@@ -17,6 +17,7 @@ public class DecompScoreHolder : MonoBehaviour
     }
     private void Start()
     {
+        AudioManager.instance.InitAudio();
         m_ScoreText.text = $"{m_Score.ToString()} / 5";
     }
     public void ChangeScore(bool answeredCorrectly)
