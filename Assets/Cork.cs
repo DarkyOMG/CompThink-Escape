@@ -68,4 +68,11 @@ public class Cork : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             m_HitHole = null;
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Hole temp = collision.GetComponent<Hole>();
+        if (!temp || temp.IsFilled) return;
+        if (temp) m_HitHole = temp;
+        temp.Highlight(true);
+    }
 }

@@ -86,6 +86,17 @@ public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDra
             m_HitTile = null;
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (m_IsSet) return;
+        Tile temp = collision.GetComponent<Tile>();
+        if (temp && temp.type == TileType.Ground)
+        {
+            m_HitTile?.Highlight(false);
+            m_HitTile = temp;
+            temp.Highlight(true);
+        }
+    }
     private void OnDestroy()
     {
         if (m_SavedTile)

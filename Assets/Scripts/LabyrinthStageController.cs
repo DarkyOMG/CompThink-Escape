@@ -19,6 +19,7 @@ public class LabyrinthStageController : MonoBehaviour
     private List<int[]> m_CurrentLabyrinth;
     [SerializeField] private GameObject m_GoButton;
     [SerializeField] private GameObject m_BackButton;
+    [SerializeField] private List<Button> m_HamsterButtons = new();
     
 
     private List<int[]> m_labyrinthOne = new List<int[]>
@@ -68,6 +69,7 @@ public class LabyrinthStageController : MonoBehaviour
                 AlgorithmButton btnScript = temp.GetComponent<AlgorithmButton>();
                 btnScript.m_Index = j+(i*4);
                 btnScript.Hamster = m_Hamster;
+                m_HamsterButtons.Add(temp.GetComponent<Button>());
             }
         }
         
@@ -105,6 +107,9 @@ public class LabyrinthStageController : MonoBehaviour
     }
     public void StartHamster()
     {
+        foreach(Button btn in m_HamsterButtons){
+            btn.interactable = false;
+        }
         m_GoButton.SetActive(false);
         m_BackButton.SetActive(false);
         m_Hamster.StartHamster(m_Endpoints[(int)m_Currentstage]);
@@ -119,6 +124,9 @@ public class LabyrinthStageController : MonoBehaviour
         PlaceHamsterOnStart();
         m_GoButton.SetActive(true);
         m_BackButton.SetActive(true);
+                foreach(Button btn in m_HamsterButtons){
+            btn.interactable = true;
+        }
         
     }
     public void LabyrinthDone()
