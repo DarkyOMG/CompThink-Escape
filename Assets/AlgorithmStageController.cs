@@ -151,6 +151,13 @@ public class AlgorithmStageController : MonoBehaviour
         if(m_CurrentMoveList != null)
         {
             Vector2Int target = m_Bird.m_Position + m_CurrentMoveList[m_CurrentMoveInList];
+            if(target.x < 0 || target.y < 0){
+                ResetBird();
+                AudioManager.instance.PlaySFX(m_WrongMoveClip);
+                m_ColorFlash.FlashColor(Color.red);
+                EventCollector.instance.OnAnimalReachedEnd -= NextMove;
+                return;
+            }
             if (target.y > 7)
             {
                 HandleWin();
@@ -198,6 +205,7 @@ public class AlgorithmStageController : MonoBehaviour
 
     private bool CheckForObstacle()
     {
+        if(m_Bird.m_Position.x < 0 || m_Bird.m_Position.y < 0) return true;
         Tile temp = m_Grid.GetElementAtIndex(m_Bird.m_Position.x, m_Bird.m_Position.y).GetComponent<Tile>();
         if (!temp) return false;
         else

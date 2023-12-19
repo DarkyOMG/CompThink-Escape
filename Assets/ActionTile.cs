@@ -114,14 +114,24 @@ public class ActionTile : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDra
 
         if(temp.x < 10 && temp.y <8 && temp.x >= 0 && temp.y >= 0)
         {
-            Debug.Log(temp);
             GameObject tempObject = AlgorithmStageController.GetObjectFromIndex(temp);
+            ActionTile tempActionTile = tempObject.GetComponent<ActionTile>();
+            if(tempActionTile){
+                tempActionTile.MarkSavedTile(color);
+                return;
+            }
             Tile tempTile = tempObject.GetComponent<Tile>();
-            Debug.Log(tempObject);
             if(tempTile){
                 tempTile.gameObject.GetComponent<Image>().color = color;
                 tempTile.m_IsBlue = color == Color.blue;
             }
+        }
+    }
+    public void MarkSavedTile(Color color)
+    {
+        if(m_SavedTile){
+                m_SavedTile.gameObject.GetComponent<Image>().color = color;
+                m_SavedTile.m_IsBlue = color == Color.blue;
         }
     }
 }
